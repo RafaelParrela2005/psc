@@ -18,7 +18,7 @@ public class MediaAritmeticaB {
         // Cálculo da média aritmética
         double media = (notaUm + notaDois + notaTres) / 3;
 
-        // Saída do resultado teste
+        // Saída do resultado
         JOptionPane.showMessageDialog(null, "A média aritmética das três notas é: " + media);
     }
 }
