@@ -12,6 +12,7 @@ public class OlaMundo {
         result = num1 + num2;
 
         System.out.println("Resultado: " + result);
+        teclado.close();
         System.exit(0);
     }
 }
