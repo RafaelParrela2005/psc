@@ -8,7 +8,7 @@ public class OlaMundo {
         num1 = teclado.nextInt();
         System.out.println("Informe o segundo número: ");
         num2 = teclado.nextInt();
-        //testing
+        //testing 2
         result = num1 + num2;
 
         System.out.println("Resultado: " + result);
