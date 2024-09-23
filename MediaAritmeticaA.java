@@ -6,7 +6,6 @@ public class MediaAritmeticaA {
 
         System.out.println("Calculadora de Média Aritmética");
 
-        // Inserção das notas do usuário
         System.out.println("Digite a primeira nota: ");
         double notaUm = input.nextDouble();
         
@@ -16,10 +15,8 @@ public class MediaAritmeticaA {
         System.out.println("Digite a terceira nota: ");
         double notaTres = input.nextDouble();
 
-        // Calculo da média aritmética
         double media = (notaUm + notaDois + notaTres) / 3;
 
-        // Saída do resultado
         System.out.println("A média aritmética das três notas é: " + media);
 
         input.close();
