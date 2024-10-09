@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BuscaVetor1 {
+public class BuscaVetor1 { // Coloquei comentários para melhor entendimento durante a apresentação, caso necessário;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
