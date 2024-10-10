@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Questao3 {
 
     public static void main(String[] args) {
-        // Criando as 2 matrizes
+        // Criando as 3 matrizes
         int i, j, k;
         Scanner input = new Scanner(System.in);
         int[][] matriz1 = new int[2][2];
