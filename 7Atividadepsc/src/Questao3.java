@@ -30,9 +30,9 @@ public class Questao3 {
         // Multiplicando a linha da primeira matriz pela coluna da segunda matriz e armazenando os valores na matriz "resultado"
         for (i = 0; i < matriz1.length; i++) {
             for (j = 0; j < matriz2[0].length; j++) {
-                resultado[i][j] = 0; // Inicializa o resultado antes de somar
+                resultado[i][j] = 0; 
                 for (k = 0; k < matriz1[0].length; k++) {
-                    resultado[i][j] += matriz1[i][k] * matriz2[k][j]; // Corrigido para multiplicação
+                    resultado[i][j] += matriz1[i][k] * matriz2[k][j]; 
                 }
             }
         }
