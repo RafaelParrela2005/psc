@@ -1,1 +1,14 @@
+Explicação
 
+A questão pede para criar uma classe Veículos com os atributos marca,modelo,chassi,placa,cor com os metódos GET E SET
+
+Una Classe DAO para manipular os valores da classe e enviar para o banco de dados
+Os metódos de reconhecimento para retornar os valores, como por exemplo usar o comando SELECT, foram feitos a partir da placa, 
+ou seja caso o usuário queira retornar alguma informação ele terá que inserir o número da placa
+
+
+O projeto tem 4 Classes , e criar uma conexão com o Sqlite, todasa s dependências estão no arquivo pom.xml do projeto
+A primeira classse é ConnectionFactory, que é responsável por criar essa conexão com o BD
+A segunda classe é Veiculo que tem os Atributos GET E SET de uma classe normal
+A terceira é VeiculoDAO que manipula o BD criando métodos que usam O INSERT , DELET E SELECT
+E por ultimo temos a Main que é responsável por rodar todos os métodos digitados e escolhidos
