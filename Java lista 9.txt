@@ -1,0 +1,240 @@
+Java lista 9
+
+1- 
+
+public class Ordenacao {
+
+    public static void bolha(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    // Troca os elementos
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+
+1/2
+
+    public static void selecao(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            int menorIndice = i;
+            for (int j = i + 1; j < n; j++) {
+                if (array[j] < array[menorIndice]) {
+                    menorIndice = j;
+                }
+            }
+            int temp = array[menorIndice];
+            array[menorIndice] = array[i];
+            array[i] = temp;
+        }
+    }
+
+
+1/3
+
+
+    public static void insercao(int[] array) {
+        int n = array.length;
+        for (int i = 1; i < n; i++) {
+            int chave = array[i];
+            int j = i - 1;
+
+            while (j >= 0 && array[j] > chave) {
+                array[j + 1] = array[j];
+                j--;
+            }
+            array[j + 1] = chave;
+        }
+    }
+}
+
+
+
+2-
+Classe ordenação: 
+
+public class Ordenacao {
+    public static void bolha(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+    }
+    public static void selecao(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            int menorIndice = i;
+            for (int j = i + 1; j < n; j++) {
+                if (array[j] < array[menorIndice]) {
+                    menorIndice = j;
+                }
+            }
+            int temp = array[menorIndice];
+            array[menorIndice] = array[i];
+            array[i] = temp;
+        }
+    }
+    public static void insercao(int[] array) {
+        int n = array.length;
+        for (int i = 1; i < n; i++) {
+            int chave = array[i];
+            int j = i - 1;
+
+            while (j >= 0 && array[j] > chave) {
+                array[j + 1] = array[j];
+                j--;
+            }
+            array[j + 1] = chave;
+        }
+    }
+}
+
+2-
+ Classe principal:
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Principal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] array = new int[10];
+        System.out.println("Digite 10 números inteiros para ordenar:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("Número " + (i + 1) + ": ");
+            array[i] = scanner.nextInt();
+        }
+        System.out.println("\nEscolha o método de ordenação:");
+        System.out.println("1 - Bolha (Bubble Sort)");
+        System.out.println("2 - Seleção (Selection Sort)");
+        System.out.println("3 - Inserção (Insertion Sort)");
+        System.out.print("Opção: ");
+        int opcao = scanner.nextInt();
+        int[] arrayOrdenado = array.clone();
+        switch (opcao) {
+            case 1:
+                Ordenacao.bolha(arrayOrdenado);
+                System.out.println("\nVetor ordenado (Bolha): " + Arrays.toString(arrayOrdenado));
+                break;
+            case 2:
+                Ordenacao.selecao(arrayOrdenado);
+                System.out.println("\nVetor ordenado (Seleção): " + Arrays.toString(arrayOrdenado));
+                break;
+            case 3:
+                Ordenacao.insercao(arrayOrdenado);
+                System.out.println("\nVetor ordenado (Inserção): " + Arrays.toString(arrayOrdenado));
+                break;
+            default:
+                System.out.println("\nOpção inválida!");
+                break;
+        }
+
+        scanner.close();
+    }
+}
+
+
+3- 
+Repetição com ordenação:
+
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Principal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] array = new int[10];
+        System.out.println("Digite 10 números inteiros para ordenar:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("Número " + (i + 1) + ": ");
+            array[i] = scanner.nextInt();
+        }
+        System.out.println("\nEscolha o método de ordenação:");
+        System.out.println("1 - Bolha (Bubble Sort)");
+        System.out.println("2 - Seleção (Selection Sort)");
+        System.out.println("3 - Inserção (Insertion Sort)");
+        System.out.print("Opção: ");
+        int opcao = scanner.nextInt()
+
+        int[] arrayOrdenado = array.clone();
+        switch (opcao) {
+            case 1:
+                Ordenacao.bolha(arrayOrdenado);
+                System.out.println("\nVetor ordenado (Bolha): " + Arrays.toString(arrayOrdenado));
+                break;
+            case 2:
+                Ordenacao.selecao(arrayOrdenado);
+                System.out.println("\nVetor ordenado (Seleção): " + Arrays.toString(arrayOrdenado));
+                break;
+            case 3:
+                Ordenacao.insercao(arrayOrdenado);
+                System.out.println("\nVetor ordenado (Inserção): " + Arrays.toString(arrayOrdenado));
+                break;
+            default:
+                System.out.println("\nOpção inválida!");
+                break;
+        }
+        scanner.close();
+    }
+}
+
+
+3- 
+Classe ordenação:
+
+
+public class Ordenacao {
+    public static void bolha(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+    }
+    public static void selecao(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            int menorIndice = i;
+            for (int j = i + 1; j < n; j++) {
+                if (array[j] < array[menorIndice]) {
+                    menorIndice = j;
+                }
+            }
+            int temp = array[menorIndice];
+            array[menorIndice] = array[i];
+            array[i] = temp;
+        }
+    }
+    public static void insercao(int[] array) {
+        int n = array.length;
+        for (int i = 1; i < n; i++) {
+            int chave = array[i];
+            int j = i - 1;
+
+            while (j >= 0 && array[j] > chave) {
+                array[j + 1] = array[j];
+                j--;
+            }
+            array[j + 1] = chave;
+        }
+    }
+}
